@@ -32,3 +32,17 @@ h2 {
   border-radius: 0.75rem;
   min-height: 6.25rem;
 }
+
+button {
+  border: none;
+  font-size: 2rem;
+  background-color: transparent;
+  width: 100%;
+  text-align: right;
+}
+
+
+
+
+
+/* //! 10:41 */
