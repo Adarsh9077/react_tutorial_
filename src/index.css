@@ -39,6 +39,7 @@ button {
   background-color: transparent;
   width: 100%;
   text-align: right;
+  cursor: pointer;
 }
 
 

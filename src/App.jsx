@@ -1,21 +1,33 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 const Card = ({ title }) => {
-  const [hasLiked, setHasLiked] = useEffect(false);
+  const [hasLiked, setHasLiked] = useState(false);
+  // const [count,]
+  useEffect(() => {
+    console.log(`${title} has been liked: ${hasLiked}`);
+  });
   return (
     <div className="card">
       <h2>{title}</h2>
-      <button onclick={() => setHasLiked(true)}></button>
+      <button
+        onClick={() => {
+          // alert(title);
+          setHasLiked(!hasLiked);
+        }}
+      >
+        {hasLiked ? "Liked " : "Like "}
+      </button>
     </div>
   );
 };
 
 const App = () => {
-  const [hasLiked, setHasLiked] = useEffect(false);
+  // const [hasLiked, setHasLiked] = useEffect(false);
   return (
     <>
       <div className="card-container">
+        <h1>hello</h1>
         <br />
         <Card title="The loin King" />
         <Card title="Dhurandar" />
@@ -29,4 +41,4 @@ const App = () => {
 export default App;
 // ! https://www.youtube.com/watch?v=dCLhUialKPQ
 
-// ? 25:25
+// ? 38:00
