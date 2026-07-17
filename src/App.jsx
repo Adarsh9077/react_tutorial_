@@ -3,12 +3,12 @@ import "./App.css";
 
 const Card = ({ title }) => {
   const [hasLiked, setHasLiked] = useState(false);
-  // const [count,]
+  const [count, setCount] = useState(0);
   useEffect(() => {
     console.log(`${title} has been liked: ${hasLiked}`);
-  });
+  }, [hasLiked]);
   return (
-    <div className="card">
+    <div className="card" onClick={() => setCount(count + 1)}>
       <h2>{title}</h2>
       <button
         onClick={() => {
@@ -41,4 +41,4 @@ const App = () => {
 export default App;
 // ! https://www.youtube.com/watch?v=dCLhUialKPQ
 
-// ? 38:00
+// ? 44:00
